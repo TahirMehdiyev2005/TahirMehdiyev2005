@@ -1,21 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int plakaKodu;
+    printf("3 ve 5'e tam bölünen, ancak 7'ye tam bölünmeyen sayılar (100 ile 200 arasında):\n");
 
-    printf("Lütfen il plaka kodunu girin: ");
-    scanf("%d", &plakaKodu);
-
-    if (plakaKodu == 1) {
-        printf("İstanbul\n");
-    } else if (plakaKodu == 34) {
-        printf("İstanbul (Bağcılar, Güngören, Bahçelievler gibi ilçeler)\n");
-    } else if (plakaKodu == 6) {
-        printf("Ankara\n");
-    } else if (plakaKodu == 35) {
-        printf("İzmir\n");
-    } else {
-        printf("Bilinmeyen plaka kodu\n");
+    for (int i = 100; i <= 200; ++i) {
+        if ((i % 3 == 0) && (i % 5 == 0) && (i % 7 != 0)) {
+            printf("%d\n", i);
+        }
     }
 
     return 0;
